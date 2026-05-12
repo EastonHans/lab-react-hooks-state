@@ -1,11 +1,15 @@
 import React from 'react'
+import { Button } from '@mui/material'
 
-const DarkModeToggle = () => {
-  // TODO: Implement dark mode toggle logic
-
+const DarkModeToggle = ({ isDarkMode, onToggle }) => {
   return (
-    <button>Toggle Dark Mode {/* TODO: Update this text from Dark to Light dynamically */}</button>
+    <Button 
+      variant="contained" 
+      onClick={onToggle}
+      color={isDarkMode ? "secondary" : "primary"}
+    >
+      Toggle {isDarkMode ? 'Light' : 'Dark'} Mode
+    </Button>
   )
 }
-
 export default DarkModeToggle
